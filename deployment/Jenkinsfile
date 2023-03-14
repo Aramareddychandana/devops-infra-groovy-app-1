@@ -47,7 +47,7 @@ stage('Integration Test') {
  
  sh "minikube image load aramareddychandana/devops-products-app"
  } else {
- bat(minikube image load aramareddychandana/devops-products-app)
+ bat("minikube image load aramareddychandana/devops-products-app")
  }
  
  stage('Kubernetes Pod') {
@@ -55,7 +55,7 @@ stage('Integration Test') {
  
  sh "kubectl apply -f k8s/deployment.yml"
  } else {
- bat(kubectl apply -f k8s/deployment.yml)
+ bat("kubectl apply -f k8s/deployment.yml")
  }
  
  }
@@ -64,7 +64,7 @@ stage('Integration Test') {
  
  sh "kubectl apply -f k8s/service.yml"
  } else {
- bat(kubectl apply -f k8s/service.yml)
+ bat("kubectl apply -f k8s/service.yml")
  }
  
  }
