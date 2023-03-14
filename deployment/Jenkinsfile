@@ -50,6 +50,7 @@ stage('Integration Test') {
  bat("minikube image load aramareddychandana/devops-products-app")
  }
  
+ }
  stage('Kubernetes Pod') {
  if (isUnix()){
  
